@@ -247,8 +247,6 @@ $$
 y(t) = H(j\Omega)e^{j\Omega t}
 $$
 
----
-
 ### 三個頻率的計算
 
 (a) $f = 100\text{Hz}$
