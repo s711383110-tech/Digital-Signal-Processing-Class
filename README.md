@@ -12,7 +12,8 @@ Date: *2025/10/2*
 
 ### ✍️ 手寫圖
 <p align="center">
-  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem1.jpg" alt="Problem 1 手寫稿" width="40%">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_1.jpg" alt="Problem 2 手寫稿（上半）" width="48%">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_2.jpg" alt="Problem 2 手寫稿（下半）" width="48%">
 </p>
 
 ### 🧩 LaTeX
@@ -86,85 +87,92 @@ $y(t)$ 可分為「暫態響應 (transient-state)」與「穩態響應 (steady-s
 ### 🧩 LaTeX
 
 已知輸入：
+
 $$
 x(t)=e^{j\Omega t}u(t)
 $$
 
-由 RC 電路的一階微分方程式：
+
+一階 RC 微分方程式（$\tau=RC$）：
+
 $$
-RC\,\frac{dy(t)}{dt}+y(t)=x(t), \qquad \tau = RC
+RC\,\frac{dy(t)}{dt}+y(t)=x(t), \qquad \tau=RC
 $$
 
----
 
-### ① Particular Solution
+#### ① Particular Solution
 
-設特解為：
+設特解：
+
 $$
 y_p(t)=K e^{j\Omega t}
 $$
 
-代回微分方程：
+
+代回方程：
+
 $$
-\tau \frac{d}{dt}(K e^{j\Omega t})+K e^{j\Omega t}
-=\tau (j\Omega K e^{j\Omega t})+K e^{j\Omega t}=e^{j\Omega t}
+\tau \frac{d}{dt}\!\left(K e^{j\Omega t}\right)+K e^{j\Omega t}
+= \tau (j\Omega K e^{j\Omega t}) + K e^{j\Omega t}
+= e^{j\Omega t}
 $$
 
-消去 $e^{j\Omega t}$ 得：
+
+消去 $e^{j\Omega t}$ 求 $K$：
+
 $$
-K(1+j\Omega\tau)=1 \;\Rightarrow\; K=\frac{1}{1+j\Omega\tau}
+(1+j\Omega\tau)K=1 \;\Rightarrow\; K=\frac{1}{1+j\Omega\tau}
 $$
 
-因此特解：
+
+故特解：
+
 $$
 y_p(t)=\frac{1}{1+j\Omega\tau}e^{j\Omega t}
 $$
 
----
 
-### ② Homogeneous Solution
+#### ② Homogeneous Solution
 
-當輸入 $x(t)=0$ 時，方程式為：
+令 $x(t)=0$，則
+
 $$
 \tau \frac{dy_h(t)}{dt}+y_h(t)=0
 $$
-解得：
+
+解得
+
 $$
 y_h(t)=A e^{-t/\tau}
 $$
 
----
 
-### ③ 總解 ($t\ge0$)
+#### ③ 總解（$t\ge 0$）
 
 $$
 y(t)=y_p(t)+y_h(t)=H(\Omega)e^{j\Omega t}+A e^{-t/\tau}
 $$
 
----
 
-### ④ 初始條件求 $A$
+#### ④ 初始條件求 $A$
 
-由於 $t<0$ 時系統無輸入，電容電壓連續：
-$$
-y(0^-)=0 \Rightarrow y(0^+)=0
-$$
-
-代 $t=0$ 入總解：
-$$
-0 = H(\Omega)\cdot1 + A\cdot1 \Rightarrow A=-H(\Omega)
-$$
-
----
-
-### ⑤ 最終結果 (有效區間 $t\ge0$)
+因 $t<0$ 無輸入且電容電壓連續，$y(0^-)=0 \Rightarrow y(0^+)=0$。代 $t=0$：
 
 $$
-y(t) = \big[\,H(\Omega)e^{j\Omega t}-H(\Omega)e^{-t/\tau}\,\big]u(t)
-=H(\Omega)\!\left(e^{j\Omega t}-e^{-t/\tau}\right)\!u(t)
+0=H(\Omega)\cdot 1 + A\cdot 1 \Rightarrow A=-H(\Omega)
 $$
 
-其中：
+
+#### ⑤ 最終結果（配上有效區間）
+
 $$
-H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}, \qquad \tau=RC
+y(t)=\Big[\,H(\Omega)e^{j\Omega t}-H(\Omega)e^{-t/\tau}\,\Big]u(t)
+= H(\Omega)\,\big(e^{j\Omega t}-e^{-t/\tau}\big)\,u(t)
+$$
+
+
+其中
+
+$$
+H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}, \qquad \tau=RC.
 $$
