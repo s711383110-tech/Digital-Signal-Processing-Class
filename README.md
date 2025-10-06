@@ -3,10 +3,6 @@
 Author: *711383110 唐宏碩*  
 Date: *2025/10/2*  
 
----
-
-### Problem 1 – Continuous-Time Response</span>
-
 # DSP Assignment-1: Simulation of RC Low-Pass Filter by Discrete Signal Processing
 **National Taipei University – Digital Signal Processing (M5631)**  
 Author: *711383110 唐宏碩*  
