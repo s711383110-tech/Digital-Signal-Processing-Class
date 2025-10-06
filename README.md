@@ -163,7 +163,7 @@ $$
 At  t = 0 \, 代 t=0 入總解:
 
 $$
-0 = H(\Omega) + A \Rightarrow\; A = -H(\Omega) .
+0 = H(\Omega) + A \Rightarrow\ A = -H(\Omega) .
 $$
 
 
