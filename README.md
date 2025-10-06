@@ -18,43 +18,51 @@ Date: *2025/10/2*
 ### 🧩 LaTeX
 
 連續時間方程式：
+
 $$
-RC\frac{dy(t)}{dt}+y(t)=x(t)
+RC \frac{dy(t)}{dt} + y(t) = x(t)
 $$
 
 設特解為：
+
 $$
-y_p(t)=K\,e^{j\Omega t}
+y_p(t) = K e^{j\Omega t}
 $$
 
 ① 對 $y_p(t)$ 微分：
+
 $$
-\frac{dy_p(t)}{dt}=j\Omega K\,e^{j\Omega t}
+\frac{dy_p(t)}{dt} = j\Omega K e^{j\Omega t}
 $$
 
 ② 代回原方程：
+
 $$
-RC(j\Omega K\,e^{j\Omega t})+K\,e^{j\Omega t}=e^{j\Omega t}
+RC (j\Omega K e^{j\Omega t}) + K e^{j\Omega t} = e^{j\Omega t}
 $$
 
-③ 整理取出 $K\,e^{j\Omega t}$：
+③ 整理取出 $K e^{j\Omega t}$：
+
 $$
-(RC\,j\Omega+1)K\,e^{j\Omega t}=e^{j\Omega t}
+(RC j\Omega + 1) K e^{j\Omega t} = e^{j\Omega t}
 $$
 
 ④ 消去 $e^{j\Omega t}$ 並求 $K$：
+
 $$
-(1+j\Omega RC)K=1 \Rightarrow K=\frac{1}{1+j\Omega RC}
+(1 + j\Omega RC) K = 1 \Rightarrow K = \frac{1}{1 + j\Omega RC}
 $$
 
 ---
 
 最終輸出：
+
 $$
-y(t)=\frac{1}{1+j\Omega RC}\,e^{j\Omega t}
+y(t) = \frac{1}{1 + j\Omega RC} e^{j\Omega t}
 $$
 
 頻率響應：
+
 $$
-H(\Omega)=\frac{1}{1+j\Omega RC}
+H(\Omega) = \frac{1}{1 + j\Omega RC}
 $$
