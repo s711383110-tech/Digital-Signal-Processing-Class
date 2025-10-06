@@ -156,18 +156,17 @@ $$
 
 $$
 因 \ t < 0 \ 無輸入，且電容電壓連續：  
-\( y(0^-) = 0 \)，所以 \( y(0^+) = y(0^-) = 0 \)。
+\ y(0^-) = 0 \， \ y(0^+) = 0 \。
 $$
 
-代 \( t = 0 \) 入總解：
+代 \ t = 0 \ 入總解：
 $$
 0 = H(\Omega) + A
 $$
 
 
 $$
-因此：
-A = -\H(\Omega)
+A = -H(\Omega)
 $$
 
 
@@ -176,8 +175,8 @@ $$
 ### ⑤ 最終解並標明有效區間
 
 $$
-y(t) = \big[\,H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau}\,\big]\,u(t)
-     = H(\Omega)\big(e^{j\Omega t} - e^{-t/\tau}\big)u(t), \quad t \ge 0
+y(t) = \big[H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau}\,\big]\u(t)
+     = H(\Omega)\big(e^{j\Omega t} - e^{-t/\tau}\big)u(t)
 $$
 
 其中：
@@ -185,7 +184,6 @@ $$
 H(\Omega) = \frac{1}{1 + j\Omega\tau}
 $$
 
-且：
 $$
 \tau = RC
 $$
