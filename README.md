@@ -22,11 +22,9 @@ It includes mathematical derivations (Problems 1–6), C implementation, and wav
 ---
 
 ## <span style="font-size:20px;">📘 Problem 1 – Continuous-Time Response</span>
-> Derive the system output \(y(t)\) for input \(x(t)=e^{j\Omega t}\),  
-> and express it in the form \(y(t)=H(\Omega)e^{j\Omega t}\).
 
 ####  Handwritten Solution
 <p align="center">
-  <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width="65%">
+  <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width=40%">
   <br>
 </p>
