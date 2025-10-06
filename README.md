@@ -212,3 +212,64 @@ $$
 \quad
 f_c = \frac{1}{2\pi RC} = 400\text{Hz}
 $$
+
+### 解法
+
+1. RC 的頻率響應 (Problem 1)：
+
+\[
+H(j\Omega) = \frac{1}{1 + j\Omega RC} = \frac{1}{1 + j\Omega \tau}
+\]
+
+2. 令 \( x = \Omega \tau = 2\pi f \tau \)，且 \( \tau = \frac{1}{2\pi \times 400} \Rightarrow x = \frac{f}{400} \)
+
+\[
+H = \frac{1}{1 + jx} = \frac{1 - jx}{1 + x^2} \quad (\text{矩形式})
+\]
+
+亦可寫成極座標形式：
+
+\[
+|H| = \frac{1}{\sqrt{1 + x^2}}, 
+\quad 
+\angle H = -\tan^{-1}(x)
+\]
+
+3. 因 \( x(t) = e^{j\Omega t} \)，輸出為：
+
+\[
+y(t) = H(j\Omega)e^{j\Omega t}
+\]
+
+---
+
+### 三個頻率的計算
+
+#### (a) \( f = 100\,\text{Hz} \)
+
+\[
+x = \frac{f}{400} = 0.25
+\]
+
+矩形式：
+
+\[
+H = \frac{1 - j(0.25)}{1 + (0.25)^2} 
+  = \frac{1 - j0.25}{1.0625}
+  = 0.94117647 - j0.23529412
+\]
+
+極座標：
+
+\[
+|H| = \frac{1}{\sqrt{1 + 0.25^2}} = 0.9701425,
+\quad 
+\angle H = -\tan^{-1}(0.25) = -14.036^\circ
+\]
+
+輸出：
+
+\[
+y(t) = H e^{j(2\pi f)t}
+     = 0.9701425 e^{j(2\pi 100t - 14.036^\circ)}
+\]
