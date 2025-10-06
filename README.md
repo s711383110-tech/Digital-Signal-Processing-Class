@@ -11,8 +11,9 @@ Date: *2025/10/2*
 ---
 
 ### ✍️ 手寫圖
-![Problem 1 手寫稿](https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem1.jpg)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem1.jpg" alt="Problem 1 手寫稿" width="40%">
+</p>
 ---
 
 ### 🧩 LaTeX
