@@ -12,8 +12,8 @@ Date: *2025/10/2*
 
 ### ✍️ 手寫圖
 <p align="center">
-  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_1.jpg" alt="Problem 2 手寫稿（上半）" width="48%">
-  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_2.jpg" alt="Problem 2 手寫稿（下半）" width="48%">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_01.jpg" alt="Problem 2 手寫稿（上半）" width="40%">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem2_02.jpg" alt="Problem 2 手寫稿（下半）" width="40%">
 </p>
 
 ### 🧩 LaTeX
