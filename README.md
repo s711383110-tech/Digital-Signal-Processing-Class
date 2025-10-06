@@ -110,8 +110,8 @@ $$
 代回方程：
 
 $$
-\tau \frac{d}{dt}\!\left(K e^{j\Omega t}\right)+K e^{j\Omega t}
-= \tau (j\Omega K e^{j\Omega t}) + K e^{j\Omega t}
+\tau \frac{d}{dt}\left(K e^{j\Omega t}\right)+K e^{j\Omega t}
+= \tau (j\Omega) K e^{j\Omega t} + K e^{j\Omega t}
 = e^{j\Omega t}
 $$
 
