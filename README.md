@@ -94,7 +94,7 @@ $$
 一階 RC 微分方程式（$\tau=RC$）：
 
 $$
-RC\,\frac{dy(t)}{dt}+y(t)=x(t), \qquad \tau=RC
+RC\frac{dy(t)}{dt}+y(t)=x(t), \qquad \tau=RC
 $$
 
 
