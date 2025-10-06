@@ -3,7 +3,7 @@
 Author: *711383110 唐宏碩*  
 Date: *2025/10/2*
 
-## Problem 1 — Continuous-Time Response
+## Problem 1
 
 已知輸入為 $x(t)=e^{j\Omega t}$，求輸出 $y(t)$，並寫成 $y(t)=H(\Omega)e^{j\Omega t}$。  
 其中 $H(\Omega)$ 為 RC 低通濾波器的頻率響應。
