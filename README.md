@@ -1,21 +1,33 @@
-# Digital Signal Processing Class
-## DSP Assignment-1: Simulation of RC Low-Pass Filter by Discrete Signal Processing
+#  Digital Signal Processing Class
+**DSP Assignment-1: Simulation of RC Low-Pass Filter by Discrete Signal Processing**  
 Author: *711383110 唐宏碩*  
 Date: *2025/10/2*  
 
 ---
 
-## Overview
+##  Overview
 This assignment demonstrates how to simulate an **RC Low-Pass Filter** using both continuous-time and discrete-time approaches.  
 It includes mathematical derivations (Problems 1–6), C implementation, and waveform visualization in Python.  
 
 ---
 
-## Problem 1
+###  Table of Contents
+1. [Problem 1 – Continuous-Time Response](#problem-1)
+2. [Problem 2 – Step Response](#problem-2)
+3. [Problem 3 – Frequency Response](#problem-3)
+4. [Problem 4 – Step Response (Given f)](#problem-4)
+5. [Problem 5 – Discrete-Time System](#problem-5)
+6. [Problem 6 – Transient + Steady-State](#problem-6)
 
 ---
-### Handwritten Solution
+
+## <span style="font-size:20px;">📘 Problem 1 – Continuous-Time Response</span>
+> Derive the system output \(y(t)\) for input \(x(t)=e^{j\Omega t}\),  
+> and express it in the form \(y(t)=H(\Omega)e^{j\Omega t}\).
+
+####  Handwritten Solution
 <p align="center">
-  <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width="50%">
+  <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width="65%">
   <br>
+  <em>Problem 1 – Handwritten Derivation</em>
 </p>
