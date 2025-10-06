@@ -91,7 +91,7 @@ x(t)=e^{j\Omega t}u(t)
 $$
 
 
-一階 RC 微分方程式（$\tau=RC$）：
+RC電路滿足的一階微分方程：
 
 $$
 RC\frac{dy(t)}{dt}+y(t)=x(t), \qquad \tau=RC
@@ -145,7 +145,7 @@ y_h(t)=A e^{-t/\tau}
 $$
 
 
-#### ③ 總解（$t\ge 0$）
+#### ③ 總解
 
 $$
 y(t)=y_p(t)+y_h(t)=H(\Omega)e^{j\Omega t}+A e^{-t/\tau}
@@ -161,7 +161,7 @@ $$
 $$
 
 
-#### ⑤ 最終結果（配上有效區間）
+#### ⑤ 最終 ans 並標明有效區間
 
 $$
 y(t)=\Big[\,H(\Omega)e^{j\Omega t}-H(\Omega)e^{-t/\tau}\,\Big]u(t)
