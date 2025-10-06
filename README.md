@@ -201,4 +201,4 @@ C = \left( \frac{1}{2\pi} \times \frac{1}{400} \times \frac{1}{1000} \right)
 
 要求：
 ```math
-y(t) \text{  for }  \Omega = 2\pi f, \quad f = 100\,Hz,\ 400\,Hz,\ 3000\,Hz
+y(t) \quad \text{for} \quad \Omega = 2\pi f, \qquad f = 100,\,400,\,3000\,Hz
