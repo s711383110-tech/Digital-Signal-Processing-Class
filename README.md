@@ -66,3 +66,8 @@ $$
 $$
 H(\Omega) = \frac{1}{1 + j\Omega RC}
 $$
+
+
+## Problem 2
+
+
