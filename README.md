@@ -155,18 +155,12 @@ $$
 #### ④ 初始條件求 $A$
 
 $$
-因 \ t < 0 \ 無輸入，且電容電壓連續：  
-\ y(0^-) = 0 ， y(0^+) = 0 \。
+y(0^-)=0 \;\Rightarrow\; y(0^+)=0 .
 $$
 
-代 \ t = 0 \ 入總解：
+At \(t=0\):
 $$
-0 = H(\Omega) + A
-$$
-
-
-$$
-A = -H(\Omega)
+0 = H(\Omega) + A \;\Rightarrow\; A = -\,H(\Omega).
 $$
 
 
@@ -174,16 +168,18 @@ $$
 
 ### ⑤ 最終解並標明有效區間
 
-$$
-y(t) = \big[H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau}\,\big]\u(t)
-     = H(\Omega)\big(e^{j\Omega t} - e^{-t/\tau}\big)u(t)
-$$
-
-其中：
-$$
-H(\Omega) = \frac{1}{1 + j\Omega\tau}
-$$
 
 $$
-\tau = RC
+y(t) = \big[\H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau}\,\big] \ u(t)
+     = H(\Omega)\big( e^{j\Omega t} - e^{-t/\tau} \big)\ u(t), \qquad t \ge 0 .
+$$
+
+with
+$$
+H(\Omega) = \frac{1}{1 + j\Omega \tau},
+$$
+
+and
+$$
+\tau = RC .
 $$
