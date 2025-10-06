@@ -164,13 +164,13 @@ $$
 #### ⑤ 最終 ans 並標明有效區間
 
 $$
-y(t)=\Big[\,H(\Omega)e^{j\Omega t}-H(\Omega)e^{-t/\tau}\,\Big]u(t)
-= H(\Omega)\,\big(e^{j\Omega t}-e^{-t/\tau}\big)\,u(t)
+y(t)=\Big[H(\Omega)e^{j\Omega t}-H(\Omega)e^{-t/\tau}\Big]u(t)
+= H(\Omega)\big(e^{j\Omega t}-e^{-t/\tau}\big)u(t)
 $$
 
 
 其中
 
 $$
-H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}, \qquad \tau=RC.
+H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}  , \qquad \tau=RC.
 $$
