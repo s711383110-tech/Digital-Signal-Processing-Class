@@ -154,7 +154,7 @@ $$
 
 #### ④ 初始條件求 $A$
 
-因 $t<0$ 無輸入且電容電壓連續，$y(0^-)=0 \Rightarrow y(0^+)=0$。代 $t=0$：
+因 $t<0$ 無輸入且電容電壓連續，y(0^-)=0 \quad \text{且} \quad y(0^+)=y(0^-)=0 。代 $t=0$：
 
 $$
 0=H(\Omega)\cdot 1 + A\cdot 1 \Rightarrow A=-H(\Omega)
@@ -172,5 +172,9 @@ $$
 其中
 
 $$
-H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}  , \qquad \tau=RC.
+H(\Omega)=\frac{1}{1+j\Omega\tau}=\frac{1}{1+j\Omega RC}
+且
+$$
+\tau=RC.
+$$
 $$
