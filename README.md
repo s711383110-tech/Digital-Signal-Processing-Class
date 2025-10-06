@@ -154,13 +154,13 @@ $$
 
 #### ④ 初始條件求 $A$
 
-For \ t < 0 \, no input and capacitor voltage is continuous:
+For  t < 0 \, no input and capacitor voltage is continuous:
 
 $$
-y(0^-) = 0 \;\Rightarrow\  y(0^+) = 0 .
+y(0^-) = 0 \Rightarrow\  y(0^+) = 0 .
 $$
 
-At \ t = 0 \, 代 t=0 入總解:
+At  t = 0 \, 代 t=0 入總解:
 
 $$
 0 = H(\Omega) + A \;\Rightarrow\; A = -\,H(\Omega) .
