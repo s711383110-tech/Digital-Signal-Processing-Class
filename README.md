@@ -197,3 +197,8 @@ $$
 ```math
 x(t) = e^{j \Omega t}, \quad R = 1000\, \Omega, \quad 
 C = \left( \frac{1}{2\pi} \times \frac{1}{400} \times \frac{1}{1000} \right)
+```
+
+要求：
+```math
+y(t) \text{ for } \Omega = 2\pi f, \quad f = 100\,Hz,\ 400\,Hz,\ 3000\,Hz
