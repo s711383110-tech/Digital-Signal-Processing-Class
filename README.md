@@ -7,14 +7,14 @@ Date: *2025/10/2*
 
 ### Problem 1 – Continuous-Time Response</span>
 
-####  Handwritten Solution
+####  Handwritten 
 <p align="center">
   <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width=40%">
   <br>
 </p>
 
 
-### Problem 1 — Continuous-Time Response
+### LaTeX
 
 已知輸入為 \(x(t)=e^{j\Omega t}\)，求輸出 \(y(t)\)，並寫成  
 \(y(t)=H(\Omega)e^{j\Omega t}\)。
