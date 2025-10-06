@@ -11,16 +11,6 @@ It includes mathematical derivations (Problems 1–6), C implementation, and wav
 
 ---
 
-###  Table of Contents
-1. [Problem 1 – Continuous-Time Response](#problem-1)
-2. [Problem 2 – Step Response](#problem-2)
-3. [Problem 3 – Frequency Response](#problem-3)
-4. [Problem 4 – Step Response (Given f)](#problem-4)
-5. [Problem 5 – Discrete-Time System](#problem-5)
-6. [Problem 6 – Transient + Steady-State](#problem-6)
-
----
-
 ## <span style="font-size:20px;">📘 Problem 1 – Continuous-Time Response</span>
 
 ####  Handwritten Solution
