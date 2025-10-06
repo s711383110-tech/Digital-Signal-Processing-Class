@@ -5,7 +5,7 @@ Date: *2025/10/2*
 
 ---
 
-## <span style="font-size:20px;">📘 Problem 1 – Continuous-Time Response</span>
+### Problem 1 – Continuous-Time Response</span>
 
 ####  Handwritten Solution
 <p align="center">
