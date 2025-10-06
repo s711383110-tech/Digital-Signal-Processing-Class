@@ -154,13 +154,16 @@ $$
 
 #### ④ 初始條件求 $A$
 
+For \( t < 0 \), no input and capacitor voltage is continuous:
+
 $$
-y(0^-)=0 \;\Rightarrow; y(0^+)=0 .
+y(0^-) = 0 \;\Rightarrow\; y(0^+) = 0 .
 $$
 
-At \(t=0\):
+At \( t = 0 \):
+
 $$
-0 = H(\Omega) + A \;\Rightarrow\; A = -\,H(\Omega).
+0 = H(\Omega) + A \;\Rightarrow\; A = -\,H(\Omega) .
 $$
 
 
@@ -170,16 +173,18 @@ $$
 
 
 $$
-y(t) = \big[\H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau}\,\big] \ u(t)
-     = H(\Omega)\big( e^{j\Omega t} - e^{-t/\tau} \big)\ u(t), \qquad t \ge 0 .
+y(t) = \Big[\, H(\Omega)e^{j\Omega t} - H(\Omega)e^{-t/\tau} \,\Big] u(t)
+     = H(\Omega)\,\Big( e^{j\Omega t} - e^{-t/\tau} \Big) u(t), \qquad t \ge 0 .
 $$
 
-with
+where
+
 $$
 H(\Omega) = \frac{1}{1 + j\Omega \tau},
 $$
 
 and
+
 $$
 \tau = RC .
 $$
