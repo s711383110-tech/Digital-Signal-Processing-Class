@@ -188,3 +188,6 @@ and
 $$
 \tau = RC
 $$
+
+
+## Problem 3
