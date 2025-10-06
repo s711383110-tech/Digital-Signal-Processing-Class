@@ -157,13 +157,13 @@ $$
 For  t < 0 \, no input and capacitor voltage is continuous:
 
 $$
-y(0^-) = 0 \Rightarrow\  y(0^+) = 0 .
+y(0^-) = 0 \Rightarrow\  y(0^+) = 0
 $$
 
 At  t = 0 \, 代 t=0 入總解:
 
 $$
-0 = H(\Omega) + A \Rightarrow\ A = -H(\Omega) .
+0 = H(\Omega) + A \Rightarrow\ A = -H(\Omega)
 $$
 
 
@@ -180,11 +180,11 @@ $$
 where
 
 $$
-H(\Omega) = \frac{1}{1 + j\Omega \tau},
+H(\Omega) = \frac{1}{1 + j\Omega \tau}
 $$
 
 and
 
 $$
-\tau = RC .
+\tau = RC
 $$
