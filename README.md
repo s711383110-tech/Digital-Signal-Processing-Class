@@ -221,7 +221,10 @@ $$
 H(j\Omega) = \frac{1}{1 + j\Omega RC} = \frac{1}{1 + j\Omega \tau}
 $$
 
-2. 令 \( x = \Omega \tau = 2\pi f \tau \)，且 \( \tau = \frac{1}{2\pi \times 400} \Rightarrow x = \frac{f}{400} \)
+2. 令
+$$
+x=\Omega\tau=2\pi f\tau,\qquad \tau=\frac{1}{2\pi\cdot 400}\;\Rightarrow\; x=\frac{f}{400}.
+$$
 
 $$
 H = \frac{1}{1 + jx} = \frac{1 - jx}{1 + x^2} \quad (\text{矩形式})
