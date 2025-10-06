@@ -70,4 +70,7 @@ $$
 
 ## Problem 2
 
+若 $x(t)=e^{j\Omega t}u(t)$，其中 $u(t)$ 為單位階躍函數，求輸出 $y(t)$。  
+$y(t)$ 可分為「暫態響應 (transient-state)」與「穩態響應 (steady-state)」。  
+其中 $H(\Omega)$ 為 RC 低通濾波器的頻率響應。
 
