@@ -180,7 +180,7 @@ $$
 where
 
 $$
-H(\Omega) = \frac{1}{1 + j\Omega \tau}
+H(\Omega) = \frac{1}{1 + j\Omega \tau} = \frac{1}{1 + j\Omega \RC}
 $$
 
 and
