@@ -29,5 +29,4 @@ It includes mathematical derivations (Problems 1–6), C implementation, and wav
 <p align="center">
   <img src="./fig/problem1.jpg" alt="Problem 1 手寫稿" width="65%">
   <br>
-  <em>Problem 1 – Handwritten Derivation</em>
 </p>
