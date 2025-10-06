@@ -239,7 +239,7 @@ $$
 \angle H = -\tan^{-1}(x)
 $$
 
-3. 因 \( x(t) = e^{j \Omega t} \)，輸出為：
+3. 因 \( x(t) = e^{j\Omega t} \)，輸出為：
 
 $$
 y(t) = H(j\Omega)e^{j\Omega t}
