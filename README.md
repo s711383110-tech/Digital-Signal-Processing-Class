@@ -208,7 +208,7 @@ y(t) \quad \text{for} \quad \Omega = 2\pi f, \qquad f = 100,\,400,\,3000\,Hz
 
 $$
 \tau = RC = 1000 \times \frac{1}{2\pi \times 400 \times 1000}
-      = \frac{1}{2\pi \times 400} \; \text{s},
+      = \frac{1}{2\pi \times 400} \text{s},
 \quad
-f_c = \frac{1}{2\pi RC} = 400\,\text{Hz}.
+f_c = \frac{1}{2\pi RC} = 400\text{Hz}
 $$
