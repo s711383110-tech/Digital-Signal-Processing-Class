@@ -340,3 +340,6 @@ $$
 y(t) = H e^{j(2\pi \cdot 3000t)} 
 = 0.13216372 e^{j(2\pi \cdot 3000t - 82.405^\circ)}
 $$
+
+
+## Problem 4
