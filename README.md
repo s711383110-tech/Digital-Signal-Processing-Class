@@ -760,3 +760,39 @@ $$
 $$
 y[0] = H + K = b_0 \quad \Rightarrow \quad K = b_0 - H
 $$
+
+### ⑤ 答案（暫態 + 穩態）
+
+總解為：
+
+$$
+y[n] = \big( H(\omega) e^{j\omega n} + (b_0 - H(\omega)) a_1^n \big) u[n]
+$$
+
+其中：
+
+$$
+H(\omega) = \frac{b_0}{1 - a_1 e^{-j\omega}}, 
+\qquad 
+a_1 = \frac{RC}{RC + T}, 
+\qquad 
+b_0 = \frac{T}{RC + T}, 
+\qquad 
+T = \frac{1}{f_s}
+$$
+
+---
+
+### 驗證的寫法（將暫態項改寫成含 \( H \) 的形式）
+
+由：
+
+$$
+b_0 - H = -a_1 e^{-j\omega} H
+$$
+
+可得：
+
+$$
+y[n] = \big( H e^{j\omega n} - H a_1^{n+1} e^{-j\omega} \big) u[n]
+$$
