@@ -343,12 +343,120 @@ $$
 
 
 ## Problem 4
-Given:
-\[
-x(t) = e^{j \Omega t} u(t), \quad R = 1000\,\Omega, \quad 
-C = \left( \frac{1}{2\pi} \times \frac{1}{400} \times \frac{1}{1000} \right) F
-\]
-Find \( y(t) \) for \( \Omega = 2\pi f \), where \( f = 100\,\text{Hz}, 400\,\text{Hz}, 3000\,\text{Hz} \).
+已知：
+
+$$
+x(t) = e^{j\Omega t}u(t), \quad R = 1000\Omega, \quad 
+C = \left(\frac{1}{2\pi} \times \frac{1}{400} \times \frac{1}{1000}\right)F
+$$
+
+求：
+
+$$
+y(t) \text{ for } \Omega = 2\pi f, \quad f = 100\,Hz,\, 400\,Hz,\, 3000\,Hz
+$$
 
 ---
+
+### Sol:
+
+$$
+\text{輸入：} x(t) = e^{j\Omega t}u(t)
+$$
+
+在 $t < 0$ 為 0，於 $t > 0$ 時為一個「階躍啟動」的訊號。
+
+$$
+\text{電路：RC 低通（輸出為電容電壓）}
+$$
+
+由於 $u(t)$ 是「因果訊號」，因此總解為：
+$$
+\text{特解（穩態） + 通解（暫態）}
+$$
+
+---
+
+### 解法：
+
+RC 電路：
+$$
+RC \frac{dy(t)}{dt} + y(t) = x(t), \quad \text{令 } \tau = RC
+$$
+
+---
+
+**對輸入** $x(t) = e^{j\Omega t}u(t)$
+
+假設特解（穩態）為：
+$$
+y_p(t) = K e^{j\Omega t}
+$$
+
+代入得：
+$$
+K(1 + j\Omega\tau) = 1
+\Rightarrow H(j\Omega) = K = \frac{1}{1 + j\Omega\tau}
+$$
+
+---
+
+**齊次解（暫態）：**
+$$
+y_h(t) = A e^{-t/\tau}
+$$
+
+---
+
+**初始條件：**
+由於電容電壓連續：
+$$
+y(0^-) = 0 \Rightarrow y(0^+) = 0
+\Rightarrow A = -H(\Omega)
+$$
+
+---
+
+**總解（對所有 $t \ge 0$）：**
+$$
+y(t) = H(\Omega)\left(e^{j\Omega t} - e^{-t/\tau}\right)u(t)
+$$
+
+其中：
+$$
+H(\Omega) = \frac{1}{1 + j\Omega\tau}
+$$
+
+---
+
+### 計算前置：
+
+$$
+\tau = RC = 1000 \times \frac{1}{2\pi \times 400 \times 1000}
+= \frac{1}{2\pi \times 400} \, s
+\approx 3.981 \times 10^{-4}s = 0.398\,ms
+$$
+
+$$
+f_c = \frac{1}{2\pi RC} = 400\,Hz
+$$
+
+令：
+$$
+x = \Omega\tau = \frac{f}{400}
+$$
+
+則：
+$$
+H = \frac{1}{1 + jx}
+= \frac{1 - jx}{1 + x^2}
+$$
+
+因此：
+$$
+|H| = \frac{1}{\sqrt{1 + x^2}}, 
+\quad \angle H = -\tan^{-1}(x)
+$$
+
+\end{document}
 
