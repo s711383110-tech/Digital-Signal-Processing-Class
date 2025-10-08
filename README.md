@@ -531,14 +531,10 @@ $$
 代入 Eq.(8)：
 
 $$
-H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0 e^{j\omega n}
+H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0\e^{j\omega n}
 $$
 
-約去 
-$$
-\( e^{j\omega n} \)
-$$
-得：
+約去 \e^{j\omega n}\ 得：
 
 $$
 H = a_1 H e^{-j\omega} + b_0
