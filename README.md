@@ -420,3 +420,66 @@ $$
 |H| = \dfrac{1}{\sqrt{1 + \chi^2}}, \quad
 \angle H = -\tan^{-1}(\chi)
 $$
+
+$$
+\text{接前頁:}
+$$
+
+---
+
+### (a) \( f = 100\,\text{Hz} \Rightarrow \chi = \dfrac{100}{400} = 0.25 \)
+
+$$
+\text{矩形式:} \quad
+H = \dfrac{1 - j0.25}{1.0625} = 0.94117647 - j0.23529412
+$$
+
+$$
+\text{極座標:} \quad
+|H| = 0.97014250, \quad \angle H = -14.036^\circ
+$$
+
+$$
+y(t) = H \left( e^{j2\pi 100t} - e^{-t/\tau} \right) u(t)
+$$
+
+或寫成極形式：
+$$
+y(t) = |H| \left( e^{j(2\pi 100t + \angle H)} - e^{-t/\tau} e^{j\angle H} \right) u(t)
+$$
+
+---
+
+### (b) \( f = 400\,\text{Hz} \Rightarrow \chi = 1 \)（剛好截止）
+
+$$
+\text{矩形式:} \quad
+H = \dfrac{1 - j1}{1 + 1^2} = 0.5 - j0.5
+$$
+
+$$
+\text{極座標:} \quad
+|H| = 0.70710678, \quad \angle H = -45^\circ
+$$
+
+$$
+y(t) = H \left( e^{j2\pi 400t} - e^{-t/\tau} \right) u(t)
+$$
+
+---
+
+### (c) \( f = 3000\,\text{Hz} \Rightarrow \chi = \dfrac{3000}{400} = 7.5 \)
+
+$$
+\text{矩形式:} \quad
+H = \dfrac{1 - j7.5}{1 + 7.5^2} = \dfrac{1 - j7.5}{57.25} = 0.01746725 - j0.13100437
+$$
+
+$$
+\text{極座標:} \quad
+|H| = 0.13216372, \quad \angle H = -82.405^\circ
+$$
+
+$$
+y(t) = H \left( e^{j2\pi 3000t} - e^{-t/\tau} \right) u(t)
+$$
