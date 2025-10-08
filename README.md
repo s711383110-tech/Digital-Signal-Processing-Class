@@ -476,7 +476,7 @@ y(t) = H \left( e^{j2\pi 3000t} - e^{-t/\tau} \right) u(t)
 $$
 
 
-## Problem 4
+## Problem 5
 ### ✍️ 手寫圖
 <p align="center">
   <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem5_01.jpg" alt="Problem 1 手寫稿" width="50%">
@@ -652,3 +652,6 @@ $$
 
 - 在低取樣率（4kHz）時，誤差較大；  
   而在高取樣率（16kHz）時，數位與模擬濾波器幾乎相同。
+
+
+## Problem 6
