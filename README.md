@@ -343,3 +343,12 @@ $$
 
 
 ## Problem 4
+Given:
+\[
+x(t) = e^{j \Omega t} u(t), \quad R = 1000\,\Omega, \quad 
+C = \left( \frac{1}{2\pi} \times \frac{1}{400} \times \frac{1}{1000} \right) F
+\]
+Find \( y(t) \) for \( \Omega = 2\pi f \), where \( f = 100\,\text{Hz}, 400\,\text{Hz}, 3000\,\text{Hz} \).
+
+---
+
