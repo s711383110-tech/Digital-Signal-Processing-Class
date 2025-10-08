@@ -491,53 +491,56 @@ $$
 ---
 
 ### 🧩 LaTeX
-$$
-\text{Sol:}
-$$
-
----
+Sol:
 
 ### ① 離散化與式簡化
-
 從 Eq.(8) 可得出這是一個一階差分方程：
 $$
-y[n] = a_1 y[n-1] + b_0 x[n],
+y[n] = a_1\,y[n-1] + b_0\,x[n].
 $$
 
 其中
 $$
-a_1 = \dfrac{RC}{RC + T}, \qquad b_0 = \dfrac{T}{RC + T},
+a_1 = \frac{RC}{RC+T}, \qquad b_0 = \frac{T}{RC+T},
 $$
 
-並且 \( a_1 + b_0 = 1. \)
+並且
+$$
+a_1 + b_0 = 1.
+$$
 
 ---
 
-### ②  假設輸入為複指數
+### ② 假設輸入為複指數
+若輸入
+$$
+x[n] = e^{j\omega n},
+$$
 
-若輸入 \( x[n] = e^{j\omega n} \)，  
-則輸出為 \( y[n] = H(\omega) e^{j\omega n}. \)
+則輸出可寫成
+$$
+y[n] = H(\omega)\,e^{j\omega n}.
+$$
 
 代入 Eq.(8)：
 $$
 H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0 e^{j\omega n}.
 $$
 
-約去 \( e^{j\omega n} \)：
+約去 \(e^{j\omega n}\) 得
 $$
 H = a_1 H e^{-j\omega} + b_0.
 $$
 
-整理得：
+整理：
 $$
-H(\omega) = \dfrac{b_0}{1 - a_1 e^{-j\omega}}.
-$$
-
-因此輸出為：
-$$
-y[n] = H(\omega) e^{j\omega n} = \dfrac{b_0}{1 - a_1 e^{-j\omega}} e^{j\omega n}.
+H(\omega) = \frac{b_0}{1 - a_1 e^{-j\omega}}.
 $$
 
----
+因此輸出：
+$$
+y[n] = H(\omega)\,e^{j\omega n}
+     = \frac{b_0}{1 - a_1 e^{-j\omega}}\,e^{j\omega n}.
+$$
 
-這個 \( H(\omega) \) 就是 **離散時間頻率響應**。
+> 註：這裡的 H(ω) 就是離散時間頻率響應。
