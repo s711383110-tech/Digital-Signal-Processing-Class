@@ -367,104 +367,76 @@ $$
 ---
 
 ### 🧩 LaTeX
+## Sol：
 
-$$
-\text{輸入：} x(t) = e^{j\Omega t}u(t)
-$$
-
-在 $t < 0$ 為 0，於 $t > 0$ 時為一個「階躍啟動」的訊號。
-
-$$
-\text{電路：RC 低通（輸出為電容電壓）}
-$$
-
-由於 $u(t)$ 是「因果訊號」，因此總解為：
-$$
-\text{特解（穩態） + 通解（暫態）}
-$$
+- 輸入：\( x(t) = e^{j\Omega t}\, u(t) \)（在 \(t<0\) 為 0，\(t\ge 0\) 打開一步階躍）。
+- 電路：RC 低通（輸出取電容）。
+- 因為乘上 \(u(t)\) 是 **因果開關**，解答分成 **穩態 + 暫態**。
 
 ---
 
-### 解法：
+## 解法：
 
-RC 電路：
-$$
-RC \frac{dy(t)}{dt} + y(t) = x(t), \quad \text{令 } \tau = RC
-$$
+1. **RC 方程：**
+   
+   $$ RC\,\frac{d y(t)}{dt} + y(t) = x(t), \quad 設\ \tau \equiv RC. $$
 
----
+2. **對 \(x(t)= e^{j\Omega t} u(t)\) 的 particular（穩態）解：**  
+   設 \(y_p(t) = K e^{j\Omega t}\)，代入得
+   $$
+   K(1 + j\Omega \tau) = 1 \quad \Rightarrow \quad K = \frac{1}{1 + j\Omega \tau}.
+   $$
+   因此
+   $$
+   H(j\Omega) = K = \frac{1}{1 + j\Omega \tau}.
+   $$
 
-**對輸入** $x(t) = e^{j\Omega t}u(t)$
+3. **齊次解（暫態）：**
+   
+   $$
+   y_h(t) = A e^{-t/\tau}.
+   $$
 
-假設特解（穩態）為：
-$$
-y_p(t) = K e^{j\Omega t}
-$$
+4. **初始條件（電容電壓連續）：**  
+   由於 \(t<0\) 沒有輸入，且電容電壓連續，  
+   $$
+   y(0^-) = 0 \ \Rightarrow\ y(0^+) = 0.
+   $$
+   總解為
+   $$
+   y(t) = y_p(t) + y_h(t) = \frac{1}{1 + j\Omega \tau} e^{j\Omega t} + A e^{-t/\tau}.
+   $$
+   代 \(t=0\)：
+   $$
+   0 = \frac{1}{1 + j\Omega \tau} + A \ \Rightarrow\ A = -\frac{1}{1 + j\Omega \tau} = -H(j\Omega).
+   $$
 
-代入得：
-$$
-K(1 + j\Omega\tau) = 1
-\Rightarrow H(j\Omega) = K = \frac{1}{1 + j\Omega\tau}
-$$
-
----
-
-**齊次解（暫態）：**
-$$
-y_h(t) = A e^{-t/\tau}
-$$
-
----
-
-**初始條件：**
-由於電容電壓連續：
-$$
-y(0^-) = 0 \Rightarrow y(0^+) = 0
-\Rightarrow A = -H(\Omega)
-$$
-
----
-
-**總解（對所有 $t \ge 0$）：**
-$$
-y(t) = H(\Omega)\left(e^{j\Omega t} - e^{-t/\tau}\right)u(t)
-$$
-
-其中：
-$$
-H(\Omega) = \frac{1}{1 + j\Omega\tau}
-$$
+5. **因此總解（對所有 \(t\ge 0\)）：**
+   
+   $$
+   \boxed{ \ y(t) = H(j\Omega)\,\big( e^{j\Omega t} - e^{-t/\tau} \big)\, u(t), \quad H(j\Omega)=\frac{1}{1 + j\Omega \tau}. \ }
+   $$
 
 ---
 
-### 計算前置：
+## 代入參數（由題目）：
 
-$$
-\tau = RC = 1000 \times \frac{1}{2\pi \times 400 \times 1000}
-= \frac{1}{2\pi \times 400} \, s
-\approx 3.981 \times 10^{-4}s = 0.398\,ms
-$$
+- \( R = 10000\,\Omega \), \quad \( C = \dfrac{1}{2\pi \cdot 400 \cdot 1000}\ \mathrm{F} \)  
+  \(\Rightarrow\) \( \tau = RC \approx 3.981\times 10^{-4}\ \mathrm{s}\)（約 \(0.398\ \mathrm{ms}\)）。
 
-$$
-f_c = \frac{1}{2\pi RC} = 400\,Hz
-$$
+- 截止頻率：
+  $$
+  f_c = \frac{1}{2\pi RC} = 400\ \mathrm{Hz}.
+  $$
 
-令：
-$$
-x = \Omega\tau = \frac{f}{400}
-$$
+- 令
+  $$
+  x \equiv \Omega\tau = \frac{f}{400}.
+  $$
 
-則：
+則
 $$
-H = \frac{1}{1 + jx}
-= \frac{1 - jx}{1 + x^2}
+H = \frac{1}{1 + jx} = \frac{1 - jx}{1 + x^2}, \qquad 
+|H| = \frac{1}{\sqrt{1+x^2}}, \qquad 
+\angle H = -\tan^{-1}(x).
 $$
-
-因此：
-$$
-|H| = \frac{1}{\sqrt{1 + x^2}}, 
-\quad \angle H = -\tan^{-1}(x)
-$$
-
-\end{document}
-
