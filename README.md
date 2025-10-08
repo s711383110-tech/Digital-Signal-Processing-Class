@@ -353,7 +353,7 @@ $$
 求：
 
 $$
-y(t) \text{ for } \Omega = 2\pi f, \quad f = 100Hz\, 400Hz,3000\Hz
+y(t) \text{ for } \Omega = 2\pi f, \quad f = 100Hz\, 400Hz\, 3000Hz
 $$
 
 ---
