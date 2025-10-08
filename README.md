@@ -525,7 +525,7 @@ $$
 則輸出可寫成：
 
 $$
-y[n] = H(\omega)\,e^{j\omega n}
+y[n] = H(\omega)\e^{j\omega n}
 $$
 
 代入 Eq.(8)：
@@ -534,7 +534,11 @@ $$
 H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0 e^{j\omega n}
 $$
 
-約去 \( e^{j\omega n} \) 得：
+約去 
+$$
+\( e^{j\omega n} \)
+$$
+得：
 
 $$
 H = a_1 H e^{-j\omega} + b_0
@@ -543,7 +547,7 @@ $$
 整理後：
 
 $$
-H(\omega) = \frac{b_0}{1 - a_1 e^{-j\omega}}
+H(\omega) = \frac{1}{1 - a_1 e^{-j\omega}}
 $$
 
 因此輸出為：
@@ -553,6 +557,4 @@ y[n] = H(\omega)e^{j\omega n}
      = \frac{b_0}{1 - a_1 e^{-j\omega}} e^{j\omega n}
 $$
 
----
-
-> 這個 \( H(\omega) \) 就是 **離散時間頻率響應**。
+這個 \( H(\omega) \) 就是 **離散時間頻率響應**。
