@@ -398,8 +398,8 @@ $$
 ---
 
 $$
-\text{數值帶入:} \\
-\tau = RC = 1 \times 10^3 \times \dfrac{1}{2\pi \times 4 \times 10^2} = \dfrac{1}{2\pi \times 400} \approx 3.981 \times 10^{-4} \text{ s } \; (0.398\,\text{ms})
+\text{數值帶入 :} \\
+\tau = RC = 1 \times 10^3 \times \dfrac{1}{2\pi \times 4 \times 10^2} = \dfrac{1}{2\pi \times 400} \approx 3.981 \times 10^{-4} \text{ s } \(0.398\text{ms})
 $$
 
 $$
