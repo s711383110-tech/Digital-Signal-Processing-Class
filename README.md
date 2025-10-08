@@ -681,7 +681,22 @@ $$
 
 為取樣週期。
 
-## 解法
+### ✍️ 手寫圖
+<p align="center">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem5_01.jpg" alt="Problem 1 手寫稿" width="50%">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem5_02.jpg" alt="Problem 1 手寫稿" width="50%">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem5_03.jpg" alt="Problem 1 手寫稿" width="50%">
+</p>
+
+---
+
+
+
+### 🧩 LaTeX
 
 ### ① 將 Eq.(8) 寫成差分方程形式
 
