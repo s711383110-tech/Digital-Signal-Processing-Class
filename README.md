@@ -439,18 +439,13 @@ $$
 y(t) = H \left( e^{j2\pi 100t} - e^{-t/\tau} \right) u(t)
 $$
 
-或寫成極形式：
-$$
-y(t) = |H| \left( e^{j(2\pi 100t + \angle H)} - e^{-t/\tau} e^{j\angle H} \right) u(t)
-$$
-
 ---
 
 ### (b) f = 400 Hz → χ = 1（剛好截止）
 
 $$
 \text{矩形式:} \quad
-H = \dfrac{1 - j1}{1 + 1^2} = 0.5 - j0.5
+H = \dfrac{1 - j1}{2} = 0.5 - j0.5
 $$
 
 $$
