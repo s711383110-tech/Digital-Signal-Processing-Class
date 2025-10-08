@@ -898,18 +898,7 @@ $$
 4. 寫入新的輸出檔案並顯示濾波完成訊息。  
 
 
-## 四、整體流程
-
-sine_wav_gen.c
-↓ 產生 sin / cos 測試音訊
-→ sincos_fs8000_f3000_L1.0.wav
-↓
-RC_filtering.c
-↓ 執行一階 RC 濾波
-→ filtered_sincos_fs8000_f3000_L1.0.wav
-
-
-## 五、結論
+## 四、結論
 
 這兩個程式完整實作了 Problem 7 的要求：
 
