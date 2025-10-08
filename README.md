@@ -403,11 +403,11 @@ $$
 $$
 
 $$
-f_c = \dfrac{1}{2\pi RC} = 400\,\text{Hz}
+f_c = \dfrac{1}{2\pi RC} = 400\text{Hz}
 $$
 
 $$
-\text{令 } \chi \equiv \Omega \tau = \dfrac{f}{f_c}
+\text{令 } \chi \equiv \Omega \tau = \dfrac{f}{400}
 $$
 
 $$
