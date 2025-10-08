@@ -841,13 +841,6 @@ $$
 
 
 ---
-了解 ✅ 你要的是「可以直接貼在 GitHub 的 README.md」
-→ 看起來像 LaTeX，但實際上是 Markdown 中展示 LaTeX 格式的原始碼區塊（不是要編譯 PDF）。
-下面這份是最乾淨、可直接複製貼上 GitHub 的版本：
-會保留排版、縮排、標題清楚，也不會被 GitHub Markdown 吃掉格式。
-
-⸻
-
 
 # Problem 7：C 語言程式講解說明
 
