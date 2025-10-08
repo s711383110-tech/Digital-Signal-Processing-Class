@@ -370,7 +370,7 @@ $$
 $$
 \text{Sol:} \\
 \begin{cases}
-\text{輸入: } x(t) = e^{j\omega t} u(t) \quad (\text{在 } t < 0 \text{ 為 } 0,  t \ge 0 \text{ 打開一個複指數}) \\
+\text{輸入: } x(t) = e^{j\Omega t} u(t) \quad (\text{在 } t < 0 \text{ 為 } 0,  t \ge 0 \text{ 打開一個複指數}) \\
 \text{電路: } RC \text{ 低通 (輸出取電容電壓)} \\
 \text{因為乘了 } u(t) \text{ 是「因果開關」，解答一定是 } \text{穩態} + \text{暫態}
 \end{cases}
@@ -383,15 +383,15 @@ $$
 \begin{cases}
 \text{RC方程: } RC \dfrac{dy(t)}{dt} + y(t) = x(t), \quad \text{令 } \tau = RC. \\
 \\
-\text{對 } x(t) = e^{j\omega t}u(t): \\
-\text{特解(穩態): } y_p(t) = K e^{j\omega t} \Rightarrow K(1 + j\omega \tau) = 1 \\
+\text{對 } x(t) = e^{j\Omega t}u(t): \\
+\text{特解(穩態): } y_p(t) = K e^{j\omega t} \Rightarrow K(1 + j\Omega \tau) = 1 \\
 H(j\omega) = K = \dfrac{1}{1 + j\omega \tau} \\
 \\
 \text{齊次解(暫態): } y_h(t) = A e^{-t/\tau} \\
-\text{初始條件: 初始時靜止且電容電壓連續 } y(0^-) = y(0^+) = 0 \Rightarrow A = -H(j\omega) \\
+\text{初始條件: 初始時靜止且電容電壓連續 } y(0^-) = y(0^+) = 0 \Rightarrow A = -H(j\Omega) \\
 \\
 \text{所以總解(對所有 } t \ge 0): \\
-y(t) = H(j\omega) \left( e^{j\omega t} - e^{-t/\tau} \right) u(t), \quad H(j\omega) = \dfrac{1}{1 + j\omega \tau}
+y(t) = H(j\Omega) \left( e^{j\omega t} - e^{-t/\tau} \right) u(t), \quad H(j\Omega) = \dfrac{1}{1 + j\Omega \tau}
 \end{cases}
 $$
 
@@ -407,7 +407,7 @@ f_c = \dfrac{1}{2\pi RC} = 400\,\text{Hz}
 $$
 
 $$
-\text{令 } \chi \equiv \omega \tau = \dfrac{f}{f_c}
+\text{令 } \chi \equiv \Omega \tau = \dfrac{f}{f_c}
 $$
 
 $$
