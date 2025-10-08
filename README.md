@@ -582,3 +582,29 @@ $$
 | 16000  | 0.0000625 | 0.86424 | 0.13576 |
 
 > 由表可見，當採樣率越高，\(a1\) 越接近 1，而 \(b0\) 越小。
+
+
+### ④ 寫出三種 \( H(\omega) \) 與 \( y[n] \)
+
+---
+
+$$
+H_{f_s}(\omega) = \frac{b_0(f_s)}{1 - a_1(f_s)e^{-j\omega}}, 
+\qquad 
+y_{f_s}[n] = H_{f_s}(\omega) e^{j\omega n}
+$$
+
+若要展開成實部與虛部：
+
+$$
+H(\omega) = \frac{b_0(1 - a_1 \cos\omega + j a_1 \sin\omega)}
+{(1 - a_1 \cos\omega)^2 + (a_1 \sin\omega)^2}
+$$
+
+因此可得：
+
+$$
+|H| = \frac{b_0}{\sqrt{(1 - a_1 \cos\omega)^2 + (a_1 \sin\omega)^2}}, 
+\qquad
+\angle H = \tan^{-1}\!\left(\frac{a_1 \sin\omega}{1 - a_1 \cos\omega}\right)
+$$
