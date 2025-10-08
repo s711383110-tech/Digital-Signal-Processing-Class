@@ -384,14 +384,14 @@ $$
 \text{RC方程: } RC \dfrac{dy(t)}{dt} + y(t) = x(t), \quad \text{令 } \tau = RC. \\
 \\
 \text{對 } x(t) = e^{j\Omega t}u(t): \\
-\text{特解(穩態): } y_p(t) = K e^{j\omega t} \Rightarrow K(1 + j\Omega \tau) = 1 \\
-H(j\omega) = K = \dfrac{1}{1 + j\omega \tau} \\
+\text{特解(穩態): } y_p(t) = K e^{j\Omega t} \Rightarrow K(1 + j\Omega \tau) = 1 \\
+H(j\Omega) = K = \dfrac{1}{1 + j\Omega \tau} \\
 \\
 \text{齊次解(暫態): } y_h(t) = A e^{-t/\tau} \\
 \text{初始條件: 初始時靜止且電容電壓連續 } y(0^-) = y(0^+) = 0 \Rightarrow A = -H(j\Omega) \\
 \\
 \text{所以總解(對所有 } t \ge 0): \\
-y(t) = H(j\Omega) \left( e^{j\omega t} - e^{-t/\tau} \right) u(t), \quad H(j\Omega) = \dfrac{1}{1 + j\Omega \tau}
+y(t) = H(j\Omega) \left( e^{j\Omega t} - e^{-t/\tau} \right) u(t), \quad H(j\Omega) = \dfrac{1}{1 + j\Omega \tau}
 \end{cases}
 $$
 
