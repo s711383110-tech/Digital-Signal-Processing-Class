@@ -370,7 +370,7 @@ $$
 $$
 \text{Sol:} \\
 \begin{cases}
-\text{輸入: } x(t) = e^{j\omega t} u(t) \quad (\text{在 } t < 0 \text{ 為 } 0, \; t \ge 0 \text{ 打開一個複數波}) \\
+\text{輸入: } x(t) = e^{j\omega t} u(t) \quad (\text{在 } t < 0 \text{ 為 } 0,  t \ge 0 \text{ 打開一個複數波}) \\
 \text{電路: } RC \text{ 低通 (輸出取電容電壓)} \\
 \text{因為乘了 } u(t) \text{ 是「如果打開」，解答一定是 } \text{穩態} + \text{暫態}
 \end{cases}
