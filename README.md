@@ -587,7 +587,7 @@ $$
 ---
 ### ④ 寫出三種 
 $$
-\( H(\omega) \) 與 \( y[n] \)
+\H(\omega) \ 與 \ y[n] \
 $$
 
 $$
@@ -608,5 +608,5 @@ $$
 $$
 |H| = \frac{b_0}{\sqrt{(1 - a_1 \cos\omega)^2 + (a_1 \sin\omega)^2}}, 
 \qquad
-\angle H = \tan^{-1}\!\left(\frac{a_1 \sin\omega}{1 - a_1 \cos\omega}\right)
+\angle H = \tan^{-1}\left(\frac{a_1 \sin\omega}{1 - a_1 \cos\omega}\right)
 $$
