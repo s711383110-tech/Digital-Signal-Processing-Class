@@ -599,7 +599,7 @@ $$
 若要展開成實部與虛部：
 
 $$
-H(\omega) = \frac{b_0(1 - a_1 \cos\omega + j a_1 \sin\omega)}
+H(\omega) = \frac{b_0}{\sqrt{(1 - a_1 \cos\omega)^2 + (a_1 \sin\omega)^2}}
 {(1 - a_1 \cos\omega)^2 + (a_1 \sin\omega)^2}
 $$
 
