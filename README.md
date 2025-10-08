@@ -525,16 +525,16 @@ $$
 則輸出可寫成：
 
 $$
-y[n] = H(\omega)\e^{j\omega n}
+y[n] = H(\omega)e^{j\omega n}
 $$
 
 代入 Eq.(8)：
 
 $$
-H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0\e^{j\omega n}
+H e^{j\omega n} = a_1 H e^{j\omega (n-1)} + b_0e^{j\omega n}
 $$
 
-約去 \e^{j\omega n}\ 得：
+約去相同項得：
 
 $$
 H = a_1 H e^{-j\omega} + b_0
