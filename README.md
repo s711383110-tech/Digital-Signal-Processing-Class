@@ -681,6 +681,7 @@ $$
 
 為取樣週期。
 
+---
 ### ✍️ 手寫圖
 <p align="center">
   <img src="https://raw.githubusercontent.com/s711383110-tech/Digital-Signal-Processing-Class/main/fig/problem6_01.jpg" alt="Problem 1 手寫稿" width="50%">
