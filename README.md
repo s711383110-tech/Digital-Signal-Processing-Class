@@ -568,6 +568,7 @@ $$
 ### 採樣率與係數表
 
 公式：
+
 $$
 a_1 = \frac{RC}{RC + T}, \qquad
 b_0 = \frac{T}{RC + T}, \qquad
