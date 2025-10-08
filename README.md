@@ -841,75 +841,117 @@ $$
 
 
 ---
-Problem 7 — C 語言程式講解說明
+\documentclass[12pt,a4paper]{article}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
 
-本題包含兩個 C 程式：
-	1.	sine_wav_gen.c：產生測試用的正弦與餘弦音訊波形
-	2.	RC_filtering.c：對音訊執行一階 RC 濾波，模擬簡單的低通濾波器
+\geometry{margin=1in}
+\setstretch{1.3}
 
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection.}{1em}{}
 
-一、sine_wav_gen.c：產生測試訊號
+\lstset{
+  basicstyle=\ttfamily\small,
+  frame=single,
+  breaklines=true,
+  backgroundcolor=\color{gray!10},
+}
 
-此程式可產生雙聲道的 .wav 音訊檔，左聲道為 sin 波，右聲道為 cos 波。
-輸出格式為 16 位元 PCM stereo，並自動建立 WAV 檔頭。
+\begin{document}
 
-使用方式
+\begin{center}
+    \Large \textbf{Problem 7：C 語言程式講解說明}\\[1em]
+    \normalsize
+    數位訊號處理課程報告 \\[0.5em]
+    作者：XXX（學號：XXXXXXXX）\\[0.5em]
+    日期：\today
+\end{center}
 
+\section{簡介}
+本題包含兩個以 C 語言撰寫的程式，分別用於產生測試訊號以及進行 RC 濾波模擬。  
+第一個程式 \texttt{sine\_wav\_gen.c} 用於生成雙聲道的正弦與餘弦波形訊號；  
+第二個程式 \texttt{RC\_filtering.c} 則讀取音訊檔並對其執行一階 RC 濾波，模擬低通濾波器的行為。
+
+\section{sine\_wav\_gen.c：產生測試訊號}
+
+此程式可產生雙聲道的 WAV 音訊檔，左聲道為正弦波，右聲道為餘弦波。輸出格式為 16 位元 PCM stereo，並自動建立 WAV 檔頭。
+
+\subsection{使用方式}
+\begin{lstlisting}
 ./sine_wav_gen fs f L output.wav
+\end{lstlisting}
 
-參數說明：
-	•	fs：取樣頻率 (Hz)
-	•	f：訊號頻率 (Hz)
-	•	L：音訊長度 (秒)
-	•	output.wav：輸出檔名
+\noindent
+\textbf{參數說明：}
+\begin{itemize}
+  \item fs：取樣頻率（單位 Hz）
+  \item f：訊號頻率（單位 Hz）
+  \item L：訊號長度（單位秒）
+  \item output.wav：輸出檔名
+\end{itemize}
 
-程式流程
-	1.	建立 WAV 檔頭
-設定取樣率、取樣位元數、通道數，並計算每秒資料率與封包大小。
-	2.	產生樣本資料
-依取樣時間計算 sin 與 cos 的振幅，並乘上常數避免音量過大造成失真。
-	•	左聲道：sin 波
-	•	右聲道：cos 波
-	3.	輸出檔案
-使用 fwrite() 將左右聲道樣本依序寫入檔案中。
+\subsection{主要流程}
+\begin{enumerate}
+  \item 建立 WAV 檔頭，設定取樣率、位元數與聲道數。
+  \item 根據取樣時間產生 sin 與 cos 的振幅值。
+  \item 將兩聲道的取樣資料依序寫入檔案。
+\end{enumerate}
 
-範例
-
+\subsection{執行範例}
+\begin{lstlisting}
 ./sine_wav_gen 8000 3000 1.0 sincos_fs8000_f3000_L1.0.wav
+\end{lstlisting}
 
-此命令會產生 1 秒長度的雙聲道音訊檔。
+此命令會產生 1 秒長度的雙聲道測試音訊檔。
 
+\section{RC\_filtering.c：實作 RC 濾波}
 
-二、RC_filtering.c：實作 RC 濾波
+此程式會讀取一個輸入的 WAV 音訊檔，並進行一階 RC 濾波處理。  
+主要功能為模擬低通濾波器的平滑化效果。
 
-此程式會讀取一個輸入的 .wav 音訊檔，並對其進行一階 RC 濾波處理。
-主要模擬一個低通濾波器的效果。
-
-使用方式
-
+\subsection{使用方式}
+\begin{lstlisting}
 ./RC_filtering in.wav out.wav
+\end{lstlisting}
 
-參數說明：
-	•	in.wav：輸入音訊檔（例如由 sine_wav_gen.c 產生）
-	•	out.wav：輸出經過 RC 濾波後的音訊檔
+\noindent
+\textbf{參數說明：}
+\begin{itemize}
+  \item in.wav：輸入音訊檔（例如 sine\_wav\_gen.c 產生的檔案）
+  \item out.wav：輸出經過 RC 濾波後的音訊檔
+\end{itemize}
 
-程式流程
-	1.	讀取 WAV 檔頭
-檢查檔案格式是否正確，只支援 16 位元雙聲道的 PCM 音訊。
-	2.	計算濾波係數
-根據設定的截止頻率（例如 4000Hz）與取樣頻率計算濾波參數 a1 與 b0。
-這兩個參數控制濾波的平滑程度與輸入響應比例。
-	3.	濾波主程式
-逐一讀取每個取樣點，根據上一個輸出值與目前輸入值進行運算。
-左右聲道分別執行相同運算，計算新的輸出樣本。
-	4.	輸出結果
-完成後輸出新的 .wav 檔，並在終端顯示濾波參數與結果狀態。
+\subsection{主要流程}
+\begin{enumerate}
+  \item 讀取 WAV 檔頭並檢查格式是否正確，僅支援 16 位元雙聲道 PCM。
+  \item 根據取樣率與設定的截止頻率計算濾波參數。
+  \item 對每個取樣點依序執行濾波運算，分別處理左右聲道。
+  \item 寫入新的輸出檔案並顯示濾波完成訊息。
+\end{enumerate}
 
+\section{整體流程}
+\begin{lstlisting}
+sine_wav_gen.c
+   ↓ 產生 sin / cos 測試音訊
+   → sincos_fs8000_f3000_L1.0.wav
+   ↓
+RC_filtering.c
+   ↓ 執行一階 RC 濾波
+   → filtered_sincos_fs8000_f3000_L1.0.wav
+\end{lstlisting}
 
-三、結論
-
+\section{結論}
 這兩個程式完整實作了 Problem 7 的要求：
-	•	sine_wav_gen.c 能依照設定產生雙聲道測試音訊。
-	•	RC_filtering.c 能對音訊進行一階 RC 濾波處理。
-	•	產生的輸出檔可直接播放，比較濾波前後的聲音差異。
+\begin{itemize}
+  \item sine\_wav\_gen.c 能依照設定的參數產生雙聲道測試音訊。
+  \item RC\_filtering.c 能對音訊執行一階 RC 濾波處理。
+  \item 產生的音檔可直接播放，方便比較濾波前後的聲音差異。
+\end{itemize}
+
+\end{document}
 ---
