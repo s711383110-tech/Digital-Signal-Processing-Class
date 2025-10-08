@@ -378,68 +378,45 @@ $$
 
 ---
 
-## 解法：
-
-1. **RC 方程：**
-   
-   $$ RC\,\frac{d y(t)}{dt} + y(t) = x(t), \quad 設\ \tau \equiv RC. $$
-
-2. **對 \(x(t)= e^{j\Omega t} u(t)\) 的 particular（穩態）解：**  
-   設 \(y_p(t) = K e^{j\Omega t}\)，代入得
-   $$
-   K(1 + j\Omega \tau) = 1 \quad \Rightarrow \quad K = \frac{1}{1 + j\Omega \tau}.
-   $$
-   因此
-   $$
-   H(j\Omega) = K = \frac{1}{1 + j\Omega \tau}.
-   $$
-
-3. **齊次解（暫態）：**
-   
-   $$
-   y_h(t) = A e^{-t/\tau}.
-   $$
-
-4. **初始條件（電容電壓連續）：**  
-   由於 \(t<0\) 沒有輸入，且電容電壓連續，  
-   $$
-   y(0^-) = 0 \ \Rightarrow\ y(0^+) = 0.
-   $$
-   總解為
-   $$
-   y(t) = y_p(t) + y_h(t) = \frac{1}{1 + j\Omega \tau} e^{j\Omega t} + A e^{-t/\tau}.
-   $$
-   代 \(t=0\)：
-   $$
-   0 = \frac{1}{1 + j\Omega \tau} + A \ \Rightarrow\ A = -\frac{1}{1 + j\Omega \tau} = -H(j\Omega).
-   $$
-
-5. **因此總解（對所有 \(t\ge 0\)）：**
-   
-   $$
-   \boxed{ \ y(t) = H(j\Omega)\,\big( e^{j\Omega t} - e^{-t/\tau} \big)\, u(t), \quad H(j\Omega)=\frac{1}{1 + j\Omega \tau}. \ }
-   $$
+$$
+\text{解法:} \\
+\begin{cases}
+\text{RC方程: } RC \dfrac{dy(t)}{dt} + y(t) = x(t), \quad \text{令 } \tau = RC. \\
+\\
+\text{對 } x(t) = e^{j\omega t}u(t): \\
+\text{特解(穩態): } y_p(t) = K e^{j\omega t} \Rightarrow K(1 + j\omega \tau) = 1 \\
+H(j\omega) = K = \dfrac{1}{1 + j\omega \tau} \\
+\\
+\text{齊次解(暫態): } y_h(t) = A e^{-t/\tau} \\
+\text{初始條件: 初始時靜止且電容電壓連續 } y(0^-) = y(0^+) = 0 \Rightarrow A = -H(j\omega) \\
+\\
+\text{所以總解(對所有 } t \ge 0): \\
+y(t) = H(j\omega) \left( e^{j\omega t} - e^{-t/\tau} \right) u(t), \quad H(j\omega) = \dfrac{1}{1 + j\omega \tau}
+\end{cases}
+$$
 
 ---
 
-## 代入參數（由題目）：
-
-- \( R = 10000\,\Omega \), \quad \( C = \dfrac{1}{2\pi \cdot 400 \cdot 1000}\ \mathrm{F} \)  
-  \(\Rightarrow\) \( \tau = RC \approx 3.981\times 10^{-4}\ \mathrm{s}\)（約 \(0.398\ \mathrm{ms}\)）。
-
-- 截止頻率：
-  $$
-  f_c = \frac{1}{2\pi RC} = 400\ \mathrm{Hz}.
-  $$
-
-- 令
-  $$
-  x \equiv \Omega\tau = \frac{f}{400}.
-  $$
-
-則
 $$
-H = \frac{1}{1 + jx} = \frac{1 - jx}{1 + x^2}, \qquad 
-|H| = \frac{1}{\sqrt{1+x^2}}, \qquad 
-\angle H = -\tan^{-1}(x).
+\text{數值帶入:} \\
+\tau = RC = 1 \times 10^3 \times \dfrac{1}{2\pi \times 4 \times 10^2} = \dfrac{1}{2\pi \times 400} \approx 3.981 \times 10^{-4} \text{ s } \; (0.398\,\text{ms})
+$$
+
+$$
+f_c = \dfrac{1}{2\pi RC} = 400\,\text{Hz}
+$$
+
+$$
+\text{令 } \chi \equiv \omega \tau = \dfrac{f}{f_c}
+$$
+
+$$
+\text{則 } 
+H = \dfrac{1}{1 + j\chi}, \quad
+H = \dfrac{1 - j\chi}{(1 + j\chi)(1 - j\chi)} = \dfrac{1 - j\chi}{1 + \chi^2}
+$$
+
+$$
+|H| = \dfrac{1}{\sqrt{1 + \chi^2}}, \quad
+\angle H = -\tan^{-1}(\chi)
 $$
