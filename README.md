@@ -391,7 +391,7 @@ H(Omega) = K = \dfrac{1}{1 + j\Omega \tau} \\
 \text{初始條件: 初始時靜止且電容電壓連續 } y(0^-) = y(0^+) = 0 \Rightarrow A = -H(j\Omega) \\
 \\
 \text{所以總解(對所有 } t \ge 0): \\
-y(t) = H(Omega) \left( e^{j\Omega t} - e^{-t/\tau} \right) u(t), \quad H(Omega) = \dfrac{1}{1 + j\Omega \tau}
+y(t) = H(\Omega) \left( e^{j\Omega t} - e^{-t/\tau} \right) u(t), \quad H(\Omega) = \dfrac{1}{1 + j\Omega \tau}
 \end{cases}
 $$
 
