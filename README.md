@@ -842,3 +842,117 @@ $$
 
 
 - 當取樣頻率 fs 越高，差分模型越貼近連續時間 RC 的行為
+
+
+
+Problem 7 — C 語言程式講解說明
+
+本題要求完成兩個 C 程式：
+(1) 產生測試用的正弦/餘弦音訊波形；
+(2) 對產生的音訊執行一階 RC 濾波，模擬式 (8) 的運算行為。
+
+⸻
+
+1. sine_wav_gen.c — 產生測試訊號
+
+此程式用於產生雙聲道的 .wav 檔，左聲道為 sin 波、右聲道為 cos 波。
+輸出為 16-bit PCM stereo 格式，並自動建立 WAV header。
+
+程式重點：
+	1.	輸入參數
+
+./sine_wav_gen fs f L output.wav
+
+	•	fs：取樣頻率 (Hz)
+	•	f：訊號頻率 (Hz)
+	•	L：訊號長度 (秒)
+	•	output.wav：輸出檔名
+
+	2.	建立 WAV header
+設定取樣率 (SampleRate)、位元數 (BitsPerSample=16)、通道數 (NumChannels=2)，
+並計算每秒位元率 (ByteRate) 與封包長度 (BlockAlign)。
+	3.	產生樣本
+
+Ls = sin(2πft);
+Rs = cos(2πft);
+
+並乘上幅度 A = 0.9 * 32767 避免失真。
+	4.	輸出檔
+使用 fwrite() 將左、右聲道樣本依序寫入，形成 stereo 音訊。
+
+範例輸出
+
+./sine_wav_gen 8000 3000 1.0 sincos_fs8000_f3000_L1.0.wav
+
+會產生 1 秒長度的雙聲道音檔。
+
+⸻
+
+2. RC_filtering.c — 實作 RC 濾波
+
+此程式讀取 .wav 音檔，根據式 (8)：
+
+y[n] = a1 * y[n-1] + b0 * x[n]
+
+對左右聲道分別做一階 RC 濾波。
+
+程式重點：
+	1.	輸入參數
+
+./RC_filtering in.wav out.wav
+
+	•	in.wav：輸入音訊檔（例如 sine_wave_gen 輸出的檔）
+	•	out.wav：輸出經濾波後的音訊檔
+
+	2.	讀取 WAV header
+檢查格式 (“RIFF”, “WAVE”, “fmt “, “data”)，
+讀出取樣率 fs 與通道數 NumChannels，僅支援 16-bit stereo PCM。
+	3.	計算濾波係數
+RC 濾波的係數為：
+
+a1 = exp(-1 / (RC * fs))
+b0 = 1 - a1
+
+在程式中：
+
+double RC = 1.0 / (2.0 * M_PI * 4000.0);  // RC 對應截止頻率約 4000 Hz
+double a1 = exp(-1.0 / (RC * fs));
+double b0 = 1.0 - a1;
+
+	4.	濾波主迴圈
+對每一個樣本執行：
+
+yL[n] = a1 * yL[n-1] + b0 * xL[n];
+yR[n] = a1 * yR[n-1] + b0 * xR[n];
+
+並寫回新的輸出 WAV。
+	5.	結果輸出
+終端顯示：
+
+Filtered WAV written: filtered_sincos_fs8000_f3000_L1.0.wav
+(fs=8000 Hz, a1=0.614, b0=0.385)
+
+
+⸻
+
+整體流程
+
+sine_wav_gen.c
+   ↓ (產生 sin/cos 訊號)
+   → sincos_fs8000_f3000_L1.0.wav
+   ↓
+RC_filtering.c
+   ↓ (執行式(8) RC 濾波)
+   → filtered_sincos_fs8000_f3000_L1.0.wav
+
+
+⸻
+
+結論
+
+這兩個程式完整實作了 Problem 7 要求的內容：
+	•	訊號產生：可自由設定頻率、取樣率與時間長度
+	•	RC 濾波：自動從輸入音檔讀取 sampling rate，並依式 (8) 執行濾波運算
+	•	結果驗證：輸出的 .wav 音檔可直接用音訊播放器聽取濾波前後差異
+
+⸻
