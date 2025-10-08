@@ -552,5 +552,3 @@ $$
 y[n] = H(\omega)e^{j\omega n}
      = \frac{b_0}{1 - a_1 e^{-j\omega}} e^{j\omega n}
 $$
-
-這個 \H(\omega) \就是 **離散時間頻率響應**。
