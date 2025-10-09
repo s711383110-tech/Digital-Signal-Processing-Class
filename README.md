@@ -937,6 +937,10 @@ $$
 ---
 
 ### (2) 波形圖形觀察（示意）
+下圖顯示輸入 (藍線) 與濾波後 (橘線) 的時間域波形變化：
+
+![RC filter time domain waveform](./fig/Time%20domain%20(overlay).png)
+
 🟦 波形觀察（Figure 1）
 	•	藍線：輸入波形（Input）
 	•	紅線：RC 濾波後波形（Filtered Output）
@@ -946,6 +950,9 @@ $$
 	•	波峰向右平移 → 表示相位延遲（Phase Lag）
 
 🟧 放大觀察（Figure 2）
+進一步放大左聲道（sine）波形，可更清楚看到相位差：
+
+![Zoomed waveform comparison](./fig/untitled.png)
 
 放大約 10 個週期後可更明顯看到：
 	•	Output（紅線）相較於 Input（藍線）往右偏移 → 相位延遲約 45°
